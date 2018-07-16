@@ -23,3 +23,6 @@
 /home/suraj/Desktop/MVCDemo/obj/Debug/netcoreapp2.1/MVCDemo.dll
 /home/suraj/Desktop/MVCDemo/obj/Debug/netcoreapp2.1/MVCDemo.pdb
 /home/suraj/Desktop/MVCDemo/obj/Debug/netcoreapp2.1/MVCDemo.csproj.CopyComplete
+/home/suraj/Desktop/MVCDemo/obj/Debug/netcoreapp2.1/Razor/Views/Home/news.g.cshtml.cs
+/home/suraj/Desktop/MVCDemo/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_HeaderNav.g.cshtml.cs
+/home/suraj/Desktop/MVCDemo/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_FooterNav.g.cshtml.cs

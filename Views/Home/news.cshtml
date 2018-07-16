@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <head>
+          <link rel="stylesheet" type="text/css" href="~/css/post.css">
+        </head>
+
+@{
+      Html.RenderPartial("_HeaderNav");   
+ }
+
+<div class="container">
+<div class="col-md-12 page-body">
+    <div class="row">
+      <div class="col-md-12 content-page">
+            <div class="col-md-12 blog-post" style="display: block;">
+     
+      <div class="post-title">
+        <h1>@ViewBag.ArticleData.title</h1>
+    </div>
+    <div class="post-info">
+        <span>September 29, 2017 by Suraj </span>
+    </div>
+      <div class="single-image col-sm-4">
+            <img src=@ViewBag.ArticleData.file.url alt="IMAGES">
+      </div>
+ 
+     
+<p> @ViewBag.ArticleData.rich_text_editor</p>
+@if (@ViewBag.ArticleData.rich_text_editor > null)
+    {
+    <a href="@ViewBag.ArticleData.file.url"></a>
+    }
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+@{
+      Html.RenderPartial("_FooterNav");   
+ }
+</body>
+</html>
