@@ -1,0 +1,104 @@
+<html>
+    <body>
+        <head>
+<link rel="stylesheet" type="text/css" href="~/css/Headerimg.css">
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+</head>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+         </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">ASP .NET Core Application</a></li>
+      
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"></a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<div class="wide">
+  	<div class="col-xs-5 line"><hr></div>
+    <div class="col-xs-2 logo">ASP .NET Core Application using contentstack .NET SDK</div>
+    <div class="col-xs-5 line"><hr></div>
+</div><br><br>
+
+<div class="container">
+  <div class="row">
+  @for(var i = 0; i < 3; i++)
+    {
+    
+  
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">@ViewBag.article.entries[@i].title</div>
+        <div class="panel-body"><img src=@ViewBag.article.entries[@i].file.url class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+  </div>
+ 
+    
+    }
+      </div>
+    </div>
+    <!--
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">@ViewBag.article.entries[1].title</div>
+        <div class="panel-body"><img src=@ViewBag.article.entries[1].file.url class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">@ViewBag.article.entries[2].title</div>
+        <div class="panel-body"><img src=@ViewBag.article.entries[2].file.url class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>--><br>
+<!--
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+  </div>
+</div>--><br><br>
+
+</body>
+</html>
+ 
