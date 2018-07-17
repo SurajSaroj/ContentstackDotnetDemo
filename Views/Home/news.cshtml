@@ -1,8 +1,8 @@
 <html>
-    <body>
-        <head>
-          <link rel="stylesheet" type="text/css" href="~/css/post.css">
-        </head>
+  <body>
+    <head>
+     <link rel="stylesheet" type="text/css" href="~/css/post.css">
+    </head>
 
 @{
       Html.RenderPartial("_HeaderNav");   
@@ -12,24 +12,17 @@
 <div class="col-md-12 page-body">
     <div class="row">
       <div class="col-md-12 content-page">
-            <div class="col-md-12 blog-post" style="display: block;">
-     
-      <div class="post-title">
+        <div class="col-md-12 blog-post" style="display: block;">
+     <div class="post-title">
         <h1>@ViewBag.ArticleData.title</h1>
     </div>
     <div class="post-info">
-        <span>September 29, 2017 by Suraj </span>
+        <span>September 29, 2017 by @ViewBag.ArticleData.author_name </span>
     </div>
       <div class="single-image col-sm-4">
             <img src=@ViewBag.ArticleData.file.url alt="IMAGES">
       </div>
- 
-     
-@Html.Raw(@ViewBag.ArticleData.rich_text_editor);
-@if (@ViewBag.ArticleData.rich_text_editor > null)
-    {
-    <a href="@ViewBag.ArticleData.file.url"></a>
-    }
+    @Html.Raw(@ViewBag.ArticleData.rich_text_editor)
             </div>
         </div>
     </div>

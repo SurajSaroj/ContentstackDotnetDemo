@@ -31,6 +31,7 @@ namespace MVCDemo.Controllers
             dynamic data = JObject.Parse(response.ResultJson);
             ViewBag.article = data;
             ViewBag.articlelength = response.Result.Length;
+            ViewBag.br = "<br>";
             return View();
         }
 

@@ -4,42 +4,45 @@
 @{
       Html.RenderPartial("_HeaderNav");   
  }
+
 <center><h1><u>Top News</u></h1></center>
-<hr width="500px">
+
 <div class="container">
   <div class="row">
   @for(var i = 0; i < @ViewBag.articlelength ; i++)
     {
+      
      var id = @ViewBag.article.entries[@i].uid;
     <div class="col-sm-12">
       <div class="panel-primary">
         <div class="post-title">
         <a href="@Url.Action("News","Home",new{ id = id })">
-        <h2>@ViewBag.article.entries[@i].title</h2></div>
+        <h2>@ViewBag.article.entries[@i].title</h2></a></div>
         <div class="panel-body">
-        <div class="col-sm-4">
-        <a href="@Url.Action("News","Home", 
-        new 
-        {
-           id = id
-        })">
+           <div class="col-sm-4">
+            <img src=@ViewBag.article.entries[@i].file.url class="img-responsive" style="width:100%" alt="Image">
+          </div> 
         
-        <img src=@ViewBag.article.entries[@i].file.url class="img-responsive" style="width:100%" alt="Image">
-        </a></div> 
-        
-        <div class="col-sm-6">
-         <p>@ViewBag.article.entries[@i].article_description</p>
-         
-         </div>
-              
+            <div class="col-sm-6">
+             <p>@ViewBag.article.entries[@i].article_description</p>
+            </div>
+
+            <a href="/Home/News/@id" class="button button-style button-anim fa fa-long-arrow-right">
+              <span>Read More</span>
+                 </a>
+
+                   <div class="panel-footerr">Category : @ViewBag.article.entries[@i].category_type &nbsp;&nbsp;&nbsp;&nbsp;Date : @ViewBag.article.entries[@i].date</div>
+             @Html.Raw("<br>")
+             @Html.Raw("<hr size=1>")
         </div>
-          <div class="panel-footer">Category : @ViewBag.article.entries[@i].category_type &nbsp;&nbsp;&nbsp;&nbsp;Date : @ViewBag.article.entries[@i].date</div>
+             
       </div>
-  </div>
-  <br><br><hr size="1">
-  }
-     </div>
   
+</div>
+    
+  }
+   </div>
+   </div>
    
 @{
       Html.RenderPartial("_FooterNav");   
