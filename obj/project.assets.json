@@ -2679,6 +2679,39 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "PagedList/1.17.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/PagedList.dll": {}
+        },
+        "runtime": {
+          "lib/net40/PagedList.dll": {}
+        }
+      },
+      "PagedList.Mvc/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "PagedList": "1.17.0"
+        },
+        "compile": {
+          "lib/net40/PagedList.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/net40/PagedList.Mvc.dll": {}
+        }
+      },
+      "Pioneer.Pagination/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Razor.Runtime": "2.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Pioneer.Pagination.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pioneer.Pagination.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -3372,17 +3405,17 @@
           "lib/netstandard1.6/System.Linq.Expressions.dll": {}
         }
       },
-      "System.Linq.Queryable/4.0.1": {
+      "System.Linq.Queryable/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Diagnostics.Debug": "4.0.11",
-          "System.Linq": "4.1.0",
-          "System.Linq.Expressions": "4.1.0",
-          "System.Reflection": "4.1.0",
-          "System.Reflection.Extensions": "4.0.1",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
@@ -4419,6 +4452,33 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "X.PagedList/7.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Linq.Expressions": "4.3.0",
+          "System.Linq.Queryable": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/X.PagedList.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/X.PagedList.dll": {}
+        }
+      },
+      "X.PagedList.Mvc.Core/7.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.0",
+          "X.PagedList": "7.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/X.PagedList.Mvc.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/X.PagedList.Mvc.Core.dll": {}
         }
       }
     }
@@ -7062,6 +7122,39 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
+    "PagedList/1.17.0": {
+      "sha512": "Ou6F3WKXh49hOo0TxWM+SkIGuKllYPuPPvnSYOlQ1sTrtuEyuDUhYbSJd5Sdb06i/sWUJZTjiUecEs3Ht/Hx3g==",
+      "type": "package",
+      "path": "pagedlist/1.17.0",
+      "files": [
+        "lib/net40/PagedList.dll",
+        "lib/net40/PagedList.xml",
+        "pagedlist.1.17.0.nupkg.sha512",
+        "pagedlist.nuspec"
+      ]
+    },
+    "PagedList.Mvc/4.5.0": {
+      "sha512": "D0M4qW2g4a9cwG8ozIKUnJheCrm5GpFTceqUl63AXWaAVnTgk+TysZYUOGMsBRuzid8aF+/E8b0bXM6+90jiEw==",
+      "type": "package",
+      "path": "pagedlist.mvc/4.5.0",
+      "files": [
+        "Content/Content/PagedList.css",
+        "lib/net40/PagedList.Mvc.XML",
+        "lib/net40/PagedList.Mvc.dll",
+        "pagedlist.mvc.4.5.0.nupkg.sha512",
+        "pagedlist.mvc.nuspec"
+      ]
+    },
+    "Pioneer.Pagination/2.1.1": {
+      "sha512": "4oZ5weNIzQ0VNGKMHUMu7VS2VDZk8ZluKJmLb7nK0umh939v33P+dVSDX72myYE0Ujl+oGHViNYr0cqt0Lypxw==",
+      "type": "package",
+      "path": "pioneer.pagination/2.1.1",
+      "files": [
+        "lib/netstandard2.0/Pioneer.Pagination.dll",
+        "pioneer.pagination.2.1.1.nupkg.sha512",
+        "pioneer.pagination.nuspec"
+      ]
+    },
     "Remotion.Linq/2.2.0": {
       "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
@@ -8839,10 +8932,10 @@
         "system.linq.expressions.nuspec"
       ]
     },
-    "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+    "System.Linq.Queryable/4.3.0": {
+      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
       "type": "package",
-      "path": "system.linq.queryable/4.0.1",
+      "path": "system.linq.queryable/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -8892,7 +8985,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.linq.queryable.4.0.1.nupkg.sha512",
+        "system.linq.queryable.4.3.0.nupkg.sha512",
         "system.linq.queryable.nuspec"
       ]
     },
@@ -11736,12 +11829,39 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "X.PagedList/7.5.0": {
+      "sha512": "Omw9u/VW7a210I3/ETEaLpcoV2DM0okACMLm8D3jmpwlWm/DgLvxZNT8na5Wp8gPj9gQpleYjeeNQUkavPgvrg==",
+      "type": "package",
+      "path": "x.pagedlist/7.5.0",
+      "files": [
+        "lib/net45/X.PagedList.dll",
+        "lib/net461/X.PagedList.dll",
+        "lib/netstandard1.1/X.PagedList.dll",
+        "lib/netstandard2.0/X.PagedList.dll",
+        "x.pagedlist.7.5.0.nupkg.sha512",
+        "x.pagedlist.nuspec"
+      ]
+    },
+    "X.PagedList.Mvc.Core/7.5.0": {
+      "sha512": "xz0skBCFx1OOXr99GHn3QitFUleJsj5sti9+DydFuPBkzBvPYsNcxPrnag9A+cm7iCJIs0patjNyv+qd+h75fA==",
+      "type": "package",
+      "path": "x.pagedlist.mvc.core/7.5.0",
+      "files": [
+        "lib/netstandard2.0/X.PagedList.Mvc.Core.dll",
+        "x.pagedlist.mvc.core.7.5.0.nupkg.sha512",
+        "x.pagedlist.mvc.core.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0",
+      "PagedList >= 1.17.0",
+      "PagedList.Mvc >= 4.5.0",
+      "Pioneer.Pagination >= 2.1.1",
+      "X.PagedList.Mvc.Core >= 7.5.0",
       "contentstack.AspNetCore >= 1.0.0-alpha",
       "contentstack.csharp >= 1.0.5-alpha"
     ]
@@ -11796,6 +11916,22 @@
             "version": "[2.1.0, )",
             "autoReferenced": true
           },
+          "PagedList": {
+            "target": "Package",
+            "version": "[1.17.0, )"
+          },
+          "PagedList.Mvc": {
+            "target": "Package",
+            "version": "[4.5.0, )"
+          },
+          "Pioneer.Pagination": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
+          "X.PagedList.Mvc.Core": {
+            "target": "Package",
+            "version": "[7.5.0, )"
+          },
           "contentstack.AspNetCore": {
             "target": "Package",
             "version": "[1.0.0-alpha, )"
@@ -11812,5 +11948,27 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList 1.17.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PagedList.Mvc 4.5.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "PagedList.Mvc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

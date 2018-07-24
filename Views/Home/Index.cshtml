@@ -1,3 +1,5 @@
+﻿@using X.PagedList.Mvc;
+@using X.PagedList; 
 <html>
 
 <body>
@@ -10,49 +12,53 @@
 
     <div class="container">
         <div class="row">
-            @for(var i = 0; i < @ViewBag.articlelength ; i++) 
-            { 
-                var id= @ViewBag.article.entries[@i].uid; 
-                <div class="col-sm-12">
+            @{ var eindex = @ViewBag.article.Count; } 
+            @for(var i = 0; i < eindex ; i++)
+            {
+           var id= @ViewBag.article[@i].UID; 
+            <div class="col-sm-12 ">
                 <div class="panel-primary">
                     <div class="post-title">
-                        <a href="@Url.Action("News","Home",new{ id = id })">
+                        <a href="/Home/News/@id" target="_blank">
                             <h2>
-                                @ViewBag.article.entries[@i].title
-                                </h2>
+                                @ViewBag.article[@i].Title
+                            </h2>
                         </a>
                     </div>
                     <div class="panel-body">
                         <div class="col-sm-4">
-                            <img src=@ViewBag.article.entries[@i].file.url class="img-responsive" style="width:100%" alt="Image">
+                            <img src=@ViewBag.article[@i].URL class="img-responsive" style="width:100%" alt="Image">
                         </div>
 
                         <div class="col-sm-6">
                             <p>
-                                @ViewBag.article.entries[@i].article_description
-                                </p>
+                                @ViewBag.article[@i].ArticleDesc
+                            </p>
                         </div>
 
                         <a href="/Home/News/@id" class="button button-style button-anim fa fa-long-arrow-right">
               <span>Read More</span>
                  </a>
 
-                        <div class="panel-footerr">Category : @ViewBag.article.entries[@i].category_type &nbsp;&nbsp;&nbsp;&nbsp;Date : 
-                            @ViewBag.article.entries[@i].date
-                        </div>
-                        @Html.Raw("<br>"); 
-                        @Html.Raw("<hr size=1>")
+
                     </div>
 
                 </div>
-
+                <div>Category : @ViewBag.article[@i].CategoryType &nbsp;&nbsp;&nbsp;&nbsp;Date : @ViewBag.article[@i].Date
+                </div>
+                @Html.Raw("<br>")
+                @Html.Raw("<hr />")
         </div>
+
 
         }
     </div>
-    </div>
 
-    @{ Html.RenderPartial("_FooterNav"); }
+    </div>
+   <center>
+@Html.PagedListPager((IPagedList)ViewBag.Article , id => Url.Action("Index", new { id }))
+</center>
+     @{ Html.RenderPartial("_FooterNav"); }
 </body>
 
 </html>

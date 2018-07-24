@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Contentstack.Core;
 using Contentstack.AspNetCore;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+
 namespace MVCDemo
 {
     public class Startup
@@ -32,7 +34,7 @@ namespace MVCDemo
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>(); 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddContentstack(Configuration);
         }
@@ -61,7 +63,7 @@ namespace MVCDemo
                     template: "{controller=Home}/{action=Index}/{id?}");
                     routes.MapRoute(
                     name: "News",
-                    template: "{controller=Home}/{action=News}/{id?}");
+                    template: "{controller=Home}/{action=News}/{id}");
              });
         }
     }

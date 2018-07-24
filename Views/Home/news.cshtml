@@ -17,12 +17,13 @@
         <h1>@ViewBag.ArticleData.title</h1>
     </div>
     <div class="post-info">
-        <span>September 29, 2017 by @ViewBag.ArticleData.author_name </span>
+        <span>July 17, 2018 by @ViewBag.ArticleData.author_name </span>
     </div>
       <div class="single-image col-sm-4">
-            <img src=@ViewBag.ArticleData.file.url alt="IMAGES">
+          
+            <img src= @ViewBag.ArticleData.file.url alt="IMAGES">
       </div>
-    @Html.Raw(@ViewBag.ArticleData.rich_text_editor)
+    @Html.Raw(@ViewBag.ArticleData.rich_text_editor) 
             </div>
         </div>
     </div>
