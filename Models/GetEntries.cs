@@ -22,13 +22,13 @@ namespace MVCDemo.Models
         {
             _stack = stack;
         }
+        
         public async Task<IEnumerable<Entries>> EntriesListBind()
         {
             var query = _stack.ContentType("articles").Query();
             var response = await query.Find();
              
             dynamic data = JObject.Parse(response.ResultJson);
-     //     var listEntries = response.Result[1].Get(;
             List<Entries> lst = new List<Entries>();    
             if ( response.Result.Length > 0)
             {   

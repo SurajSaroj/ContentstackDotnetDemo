@@ -11,5 +11,6 @@ namespace MVCDemo.Models {
       public string ArticleDesc { get; set; }
       public string CategoryType { get; set; }
       public string Date { get; set; }
+      
    }
 }
