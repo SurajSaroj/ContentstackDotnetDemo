@@ -3,7 +3,7 @@
     width:100%;
     height:300px;
    
-    background-image:url('https://www.contentstack.com/docs/assets/blt2beea97c910ed076/Dot%20Net%20News%20App.jpg');
+    background-image:url('/images/NewsAppImg.jpg');
     background-size:cover;
   }
   

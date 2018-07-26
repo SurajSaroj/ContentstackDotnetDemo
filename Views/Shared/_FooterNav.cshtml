@@ -1,15 +1,22 @@
+ @model Footer
 <!-- Footer Start -->
 <div class="col-md-12 page-body margin-top-50 footer">
     <footer>
         <ul class="menu-link">
             <li>
-                <a href="https://localhost:5001/">Home</a>
+                <a href= "@Model.FooterData.home.href" >
+                    @Model.FooterData.home.title
+                </a>
             </li>
              <li>
-                <a href="https://localhost:5001/">About</a>
+                <a href= "@Model.FooterData.about.href" >
+                    @Model.FooterData.about.title
+                </a>
             </li>
         </ul>
-        <p>© Copyright 2018. All rights reserved</p>
+            <p>
+            @Model.FooterData.copyright
+            </p>
     </footer>
 </div>
 <!-- Footer End -->

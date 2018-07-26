@@ -1,9 +1,11 @@
 ﻿@using X.PagedList.Mvc;
 @using X.PagedList; 
 <html>
-
 <body>
+    <head>
+<title>Contentstack .Net Demo</title>
 
+</head>
     @{ Html.RenderPartial("_HeaderNav"); }
 
     <center>
@@ -56,9 +58,10 @@
 
     </div>
    <center>
-@Html.PagedListPager((IPagedList)ViewBag.Article , id => Url.Action("Index", new { id }))
-</center>
-     @{ Html.RenderPartial("_FooterNav"); }
+        @Html.PagedListPager((IPagedList)ViewBag.Article , id => Url.Action("Index", new { id }))
+    </center>
+   
+    @{ Html.RenderPartial("_FooterNav"); }
 </body>
 
 </html>
