@@ -1,2 +1,5 @@
 /bin/*
 /obj/*
+obj/Debug/netcoreapp2.1/MVCDemo.assets.cache
+obj/Debug/netcoreapp2.1/MVCDemo.Views.dll
+obj/MVCDemo.csproj.nuget.cache

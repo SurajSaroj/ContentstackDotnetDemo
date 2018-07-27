@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Contentstack.Core;
-using Contentstack.Core.Configuration;
-using Microsoft.Extensions.Options;
 using MVCDemo.Models;
-using MVCDemo;
 using Newtonsoft.Json.Linq;
 using Contentstack.Core.Models;
 using X.PagedList;
@@ -42,7 +37,7 @@ namespace MVCDemo.Controllers
             string title=null;
             Entry entry = _stack.ContentType("header").Entry("bltf7a51839a49b9b3c");
             await entry.Fetch().ContinueWith((entryResult) =>
-            {ViewBag.title = entryResult.Result.Title;
+            {
                  title =  entryResult.Result.Title;
             });
             return PartialView("~/Views/Shared/_HeaderNav.cshtml",new Footer{ AppTitle = title });
@@ -67,6 +62,13 @@ namespace MVCDemo.Controllers
                 dynamic data = JObject.Parse(entryResult.Result.ToJson());
                 ViewBag.ArticleData = data;
             });
+            if(!doOnce){
+                try{
+                    await GetTitle();
+                    await GetFooter();
+                 }catch(Exception ex){  }
+              doOnce=true;
+            } 
             return View();
         }
    
